@@ -9,34 +9,33 @@
             <span style="color:red">O</span>
         </h2>
         <h1>Sign in </h1>
-        <h3> Use your Google Account</h3>
+        <h3> Use your Fundoo Account</h3>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="email">
+        <mat-form-field appearance="outline" class="em">
+            <mat-label>Email or Phone</mat-label>
+            <input matInput  formControlName="email" placeholder="abc@gmail.com"> 
+            <mat-error class="err">Enter Username</mat-error>
+        </mat-form-field>
     </div>
 
     <div class="email">
         <mat-form-field appearance="outline" class="em">
-            <mat-label>Email or Phone</mat-label>
-            <input matInput placeholder="abc@gmail.com"> 
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" placeholder="password"> 
+            <mat-error class="err">Enter Password</mat-error>
+            <mat-hint class="hint"><a routerLink="/forgotpassword"  class="anchor" >Forgot Password</a></mat-hint>
         </mat-form-field>
     </div>
 
-    <div class="forgetEmail">
-        <a href="https://www.google.com/"  class="anchor" target="_blank">Forgot email?</a>
-    </div>
-
-    <div class="matter">
-        <span>
-            Not your computer? Use Guest mode to sign in privately.
-        </span>
-        <div class="forgetEmail">
-            <a href="https://www.google.com/"  class="anchor" target="_blank">Learn more</a>
-        </div>
-    </div>
 
     <div class="bttn">
         <div class="bttn1 btt">
             <section>
                 <div class="example-button-row">
-                  <button mat-button >Create account</button>
+                  <button mat-button routerLink="/registration">Create account</button>
                 </div>
               </section>
         </div>
@@ -45,9 +44,9 @@
             <section>
                 <div class="example-button-row">
                     <button mat-raised-button class="fullbttn">Next</button>
-                  
                 </div>
             </section>
         </div>
     </div>
+    </form>
 </div>

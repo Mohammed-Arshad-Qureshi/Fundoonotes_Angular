@@ -1,7 +1,7 @@
 .container{
-    height: auto;
+    height: 400px;
     border: 1px solid #777777;
-    width: 24%;
+    width: 25%;
     margin: 100px auto 0 auto;
     border-radius: 8px;
     padding: 48px 40px 36px;
@@ -17,9 +17,8 @@
 }
 .bttn{
     display: flex;
-    margin: 6em 0px 0px 0px;
+    padding-top:50px;
     justify-content:space-between;
-    padding: 0 0 30px;
     margin-bottom: 10px;
 }
 .anchor{
@@ -38,4 +37,20 @@ button{
 }
 .matter{
     padding-top: 50px;
+}
+
+.email{
+    margin-bottom: 20px;
+}
+
+.hint{
+    font-size:12px;
+    padding-top:20px;
+    text-align:left;
+}
+
+.err{
+    font-size:12px;
+    padding-top:16px;
+    text-align:left;
 }

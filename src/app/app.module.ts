@@ -6,13 +6,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginPasswordComponent } from './components/login-password/login-password.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,6 @@ import { LoginPasswordComponent } from './components/login-password/login-passwo
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    LoginPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,10 @@ import { LoginPasswordComponent } from './components/login-password/login-passwo
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
