@@ -12,19 +12,15 @@
 .em{
     width: 100%;
 }
-
 ::ng-deep.mat-form-field-wrapper {
     padding-bottom: 0;
 }
-
 .bttn{
     display: flex;
-    margin: 25px 0px 0px 0px;
-    justify-content: end;
-    padding: 0 0 30px;
+    padding-top:80px;
+    justify-content:space-between;
     margin-bottom: 10px;
 }
-
 .anchor{
     text-decoration: none;
     font-weight:500;
@@ -39,12 +35,20 @@ button{
     background-color:#1a73e8 ;
     color:white;
 }
+.matter{
+    padding-top: 50px;
+}
+
 .email{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.showpass{
-    margin: 18px 0 0 2px;
+
+.hint{
+    font-size:12px;
+    padding-top:20px;
+    text-align:left;
 }
+
 .err{
     font-size:12px;
     padding-top:16px;

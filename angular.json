@@ -70,7 +70,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Fundoonotes_Angular:build:production",
+              "browserTarget": "Fundoonotes_Angular:build:production"
               
             },
             "development": {

@@ -1,0 +1,87 @@
+<div>
+    <mat-toolbar class="navbar">
+        <!-- <button mat-icon-button>
+            <mat-icon >menu</mat-icon>
+        </button> -->
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle();">
+            <img src="assets/images/icons/menuicon.png" alt="menu icon" width="25px">
+        </button>
+        <span class="logoimage">
+            <span class="logoimg">
+                <img src="assets/images/icons/logo.png" alt="logo" width="38px">
+            </span>
+        </span>
+        <span class="product company" style="color:#5f6368">FUNDOO</span>
+
+        <div>
+            <form>
+                <div class="searchbody">
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img src="assets/images/icons/search.png" alt="menu icon" width="25px">
+                    </button>
+                    <input class="inputtxt" autocomplete="off" placeholder="search" type="text" id="name">
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img class="nnn" src="assets/images/icons/close.png"alt="menu icon" width="25px">
+                    </button>
+                </div>
+            </form>
+
+        </div>
+        
+        <div class="lastitems">
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets/images/icons/referesh.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets/images/icons/view1.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets/images/icons/setting.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+        </div>
+       
+        <div class="account">
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets/images/icons/apps.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets/images/icons/account.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+
+        </div>
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side"style="width:16% ;">
+            <mat-nav-list class="selcetIcon">
+                <ul class="menu-items product">
+                    <li (click)="goTo('Notes')" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sideicon" src="assets/images/icons/bulb.png" alt="menu icon" width="18px"><span class="text-data">Notes</span></li>
+                    <li (click)="goTo('Remainders')" [ngClass]="{'onActive':selectedMenu == 'Remainders'}"><img class="sideicon" src="assets/images/icons/remainder.png" alt="menu icon" width="20px"><span class="text-data">Remainders</span></li>
+                    <li (click)="goTo('Edit')" [ngClass]="{'onActive':selectedMenu == 'Edit'}"><img class="sideicon" src="assets/images/icons/edit.png" alt="menu icon" width="20px"><span class="text-data">Edit</span></li>
+                    <li (click)="goTo('Archive')" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img class="sideicon" src="assets/images/icons/archive.png" alt="menu icon" width="20px"><span class="text-data">Archive</span></li>
+                    <li (click)="goTo('Trash')" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sideicon" src="assets/images/icons/trash.png" alt="menu icon" width="20px"><span class="text-data">Trash</span></li>
+                </ul>
+                <!-- <a mat-list-item>Home</a>
+                <a mat-list-item>Account</a>
+                <a mat-list-item>About us</a>
+                <a mat-list-item>Contact Us</a>
+                <a mat-list-item>Help</a> -->
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="height: 88vh;">
+
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+   
+</div>

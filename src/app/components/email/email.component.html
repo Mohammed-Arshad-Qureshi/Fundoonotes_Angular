@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="sub">
+        <h2>
+            <span style="color:blue">F</span>
+            <span style="color:red">U</span>
+            <span style="color:orange">N</span>
+            <span style="color:blue">D</span>
+            <span style="color:green">O</span>
+            <span style="color:red">O</span>
+        </h2>
+        <h1>Forget password </h1>
+        <h3> Enter email for to reset new password</h3>
+    </div>
+
+    <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <div class="email">
+            <mat-form-field appearance="outline" class="em">
+                <mat-label>Email or Phone</mat-label>
+                <input matInput formControlName="email" placeholder="abc@gmail.com">
+                <mat-error class="err">Enter Username</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="bttn">
+            <div class="bttn1 btt">
+                <section>
+                    <div class="example-button-row">
+                        <button mat-button routerLink="/login">Sign in instead</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bttn2 btt">
+                <section>
+                    <div class="example-button-row">
+                        <button mat-raised-button class="fullbttn">Next</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </form>
+</div>
