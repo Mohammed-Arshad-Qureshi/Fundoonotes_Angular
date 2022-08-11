@@ -1,0 +1,48 @@
+.container {
+    background-color: white;
+    border-radius: 6px;
+    width: 31%;
+    line-height:1;
+    border-width: thin;
+    border: 1px solid #e3dede;
+    margin: 30px auto;
+    padding: 5px 1px 5px 5px;;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.inputtxt {
+    width: 92%;
+    height: 30px;
+    font-size: small;
+    outline-style: none;
+    font-size: medium;
+    border-radius: 6px;
+    border: none;
+    padding: 1px 15px;
+
+}
+.title-txt{
+    display: flex;
+}
+
+.note-items{
+display: flex;
+justify-content: space-between;
+}
+.note-icons{
+display:flex;
+}
+
+.title-filed{
+    width: 90%;
+}
+
+.title-note-field{
+    width: 100%;
+}
+
+.title-data{
+    margin:1px 2px 8px 2px;
+}
+// ============================================

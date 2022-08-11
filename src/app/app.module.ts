@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmailComponent } from './components/email/email.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNodeComponent } from './components/create-node/create-node.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { CreateNodeComponent } from './components/create-node/create-node.compon
     ForgetPasswordComponent,
     EmailComponent,
     DashboardComponent,
-    CreateNodeComponent
+    CreateNodeComponent,
+    DisplayNoteComponent,
+    GetAllnotesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,58 @@
-<p>create-node works!</p>
+<div class="container product">
+    <div class="searchbody">
+        <div class="title-txt title-data">
+            <div *ngIf="isMenuOpened" class="title-filed">
+                <input class="inputtxt" autocomplete="off" placeholder="Title" type="text" style="font-size: 15px;">
+            </div>
+            <div *ngIf="isMenuOpened">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img *ngIf="isMenuOpened" src="assets/images/icons/pin.png" alt="pin" width="22px">
+                </button>
+            </div>
+        </div>
+        <div class="title-note-field title-data">
+            <input class="inputtxt" autocomplete="off" (click)="openMenu()" placeholder="Take a Note" type="text"
+                style="font-size: 15px;">
+        </div>
+
+        <div class="note-items title-data" *ngIf="isMenuOpened">
+
+            <div class="note-icons">
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img *ngIf="isMenuOpened" src="assets/images/icons/remaind.png" alt="pin" width="17px">
+                    </button>
+                </div>
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img *ngIf="isMenuOpened" src="assets/images/icons/collab.png" alt="pin" width="17px">
+                    </button>
+                </div>
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img *ngIf="isMenuOpened" src="assets/images/icons/color.png" alt="pin" width="17px">
+                    </button>
+                </div>
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img *ngIf="isMenuOpened" src="assets/images/icons/archive.png" alt="pin" width="17px">
+                    </button>
+                </div>
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img *ngIf="isMenuOpened" src="assets/images/icons/more.png" alt="pin" width="17px">
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <span class="product">
+
+                    <button mat-button (click)="closeMenu()" class="example-icon close-bttn" style="margin-right: 10px;"
+                        aria-label="Example icon-button with menu icon">
+                        Close
+                    </button></span>
+            </div>
+        </div>
+    </div>
+</div>

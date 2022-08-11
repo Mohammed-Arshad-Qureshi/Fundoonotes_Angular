@@ -3,7 +3,8 @@
         <!-- <button mat-icon-button>
             <mat-icon >menu</mat-icon>
         </button> -->
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle();">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="sidenav.toggle();">
             <img src="assets/images/icons/menuicon.png" alt="menu icon" width="25px">
         </button>
         <span class="logoimage">
@@ -19,15 +20,18 @@
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
                         <img src="assets/images/icons/search.png" alt="menu icon" width="25px">
                     </button>
-                    <input class="inputtxt" autocomplete="off" placeholder="search" type="text" id="name">
+                   
+                        <input class="inputtxt" autocomplete="off" placeholder="search" type="text" id="name">
+                    <span>
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <img class="nnn" src="assets/images/icons/close.png"alt="menu icon" width="25px">
-                    </button>
+                        <img class="cancle-bttn" src="assets/images/icons/close.png"alt="menu icon" width="25px">
+                    </button> 
+                    </span>
                 </div>
             </form>
 
         </div>
-        
+
         <div class="lastitems">
             <div>
                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
@@ -45,7 +49,7 @@
                 </button>
             </div>
         </div>
-       
+
         <div class="account">
             <div>
                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
@@ -61,27 +65,32 @@
         </div>
     </mat-toolbar>
     <mat-sidenav-container>
-        <mat-sidenav #sidenav mode="side"style="width:16% ;">
+        <mat-sidenav #sidenav mode="side" style="width:16% ;">
             <mat-nav-list class="selcetIcon">
                 <ul class="menu-items product">
-                    <li (click)="goTo('Notes')" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sideicon" src="assets/images/icons/bulb.png" alt="menu icon" width="18px"><span class="text-data">Notes</span></li>
-                    <li (click)="goTo('Remainders')" [ngClass]="{'onActive':selectedMenu == 'Remainders'}"><img class="sideicon" src="assets/images/icons/remainder.png" alt="menu icon" width="20px"><span class="text-data">Remainders</span></li>
-                    <li (click)="goTo('Edit')" [ngClass]="{'onActive':selectedMenu == 'Edit'}"><img class="sideicon" src="assets/images/icons/edit.png" alt="menu icon" width="20px"><span class="text-data">Edit</span></li>
-                    <li (click)="goTo('Archive')" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img class="sideicon" src="assets/images/icons/archive.png" alt="menu icon" width="20px"><span class="text-data">Archive</span></li>
-                    <li (click)="goTo('Trash')" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sideicon" src="assets/images/icons/trash.png" alt="menu icon" width="20px"><span class="text-data">Trash</span></li>
+                    <li (click)="goTo('Notes')" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sideicon"
+                            src="assets/images/icons/bulb.png" alt="menu icon" width="18px"><span
+                            class="text-data">Notes</span></li>
+                    <li (click)="goTo('Remainders')" [ngClass]="{'onActive':selectedMenu == 'Remainders'}"><img
+                            class="sideicon" src="assets/images/icons/remainder.png" alt="menu icon" width="20px"><span
+                            class="text-data">Remainders</span></li>
+                    <li (click)="goTo('Edit')" [ngClass]="{'onActive':selectedMenu == 'Edit'}"><img class="sideicon"
+                            src="assets/images/icons/edit.png" alt="menu icon" width="20px"><span
+                            class="text-data">Edit</span></li>
+                    <li (click)="goTo('Archive')" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img
+                            class="sideicon" src="assets/images/icons/archive.png" alt="menu icon" width="20px"><span
+                            class="text-data">Archive</span></li>
+                    <li (click)="goTo('Trash')" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sideicon"
+                            src="assets/images/icons/trash.png" alt="menu icon" width="20px"><span
+                            class="text-data">Trash</span></li>
                 </ul>
-                <!-- <a mat-list-item>Home</a>
-                <a mat-list-item>Account</a>
-                <a mat-list-item>About us</a>
-                <a mat-list-item>Contact Us</a>
-                <a mat-list-item>Help</a> -->
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
             <div style="height: 88vh;">
-
+                <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
-   
+
 </div>

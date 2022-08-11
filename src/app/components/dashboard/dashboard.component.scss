@@ -22,14 +22,16 @@ input{
     background-color:#f1ebeb;
     border-radius: 6px;
     width:250%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .inputtxt{
     background-color:#f1ebeb;
-    width:80%;
+    width:86%;
     height: 30px;
     font-size: medium;
     outline: none;
+    
 }
 .searchbody:active{
     background-color: white;
@@ -49,10 +51,6 @@ input{
     background-color: white;
 }
 
-.nnn{
-    display: inline-block;
-    margin-left:50px ;
-}
 .lastitems{
     display: flex;
     flex-direction: row;

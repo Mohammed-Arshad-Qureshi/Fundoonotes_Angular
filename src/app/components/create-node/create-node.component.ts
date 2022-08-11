@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-node.component.scss']
 })
 export class CreateNodeComponent implements OnInit {
-
+isMenuOpened: boolean=false;
+ispined: boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openMenu():void{
+    this.isMenuOpened = true;
+  }
+  closeMenu():void{
+    this.isMenuOpened = false;
   }
 
 }
