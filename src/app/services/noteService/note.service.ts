@@ -25,7 +25,6 @@ export class NoteService {
   }
 
   getAllNotesService(){
-
     let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',

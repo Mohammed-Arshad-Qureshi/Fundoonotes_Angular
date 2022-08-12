@@ -1,0 +1,30 @@
+<div  class="container">
+    <div class="note" *ngFor="let note of NotesList">
+        <mat-card class="card" style="width: 180px;" class="example-card">
+            <mat-card-title style="font-size: 15px;">{{note.title}}</mat-card-title>
+            <mat-card-content>
+              <p style="font-size: 14px;">{{note.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+            <div>
+                <p>buttons</p>
+            </div>
+        </mat-card>
+        <!-- <ol>
+            <li>
+              <mat-form-field appearance="fill">
+                <mat-label>What's your name?</mat-label>
+                <input matInput [(ngModel)]="name">
+              </mat-form-field>
+            </li>
+            <li>
+              <button mat-raised-button (click)="openDialog()">Pick one</button>
+            </li>
+            <li *ngIf="animal">
+              You chose: <i>{{animal}}</i>
+            </li>
+          </ol> -->
+
+    </div>
+</div>

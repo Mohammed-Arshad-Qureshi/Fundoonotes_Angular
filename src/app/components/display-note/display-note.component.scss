@@ -1,6 +1,10 @@
-.container{
-    width:600px;
-    height:40px;
-    border:1px solid green;
-    margin:2em 1em 0 28%;
+.container {
+    width: 80%;
+    display:flex;
+    margin-left: 12%;
+    flex-flow: wrap;
+}
+
+.note{
+    margin:5px;
 }

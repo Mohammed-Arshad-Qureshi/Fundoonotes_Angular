@@ -13,6 +13,7 @@ export class GetAllnotesComponent implements OnInit {
   constructor(private note:NoteService) { }
 
   ngOnInit(): void {
+    console.log("hello world");
     this.getAllNotes();
   }
 
@@ -22,8 +23,8 @@ export class GetAllnotesComponent implements OnInit {
       this.notesArray = request.data;
       console.log("noteArray",this.notesArray);
        this.notesArray.reverse();
-      console.log(this.notesArray.reverse());
       return this.notesArray;
+      
     })
   }
 

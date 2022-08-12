@@ -13,6 +13,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -26,6 +28,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNodeComponent } from './components/create-node/create-node.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.com
     DashboardComponent,
     CreateNodeComponent,
     DisplayNoteComponent,
-    GetAllnotesComponent
+    GetAllnotesComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.com
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
