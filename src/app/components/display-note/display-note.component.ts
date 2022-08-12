@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-display-note',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayNoteComponent implements OnInit {
 
+  @Input() NotesList:any;
+  // @Output() messageDisplaytoGetAllnotes = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log("this is form Display:note" ,this.NotesList);
   }
 
 }
