@@ -18,33 +18,9 @@
 
             <div class="note-items title-data" *ngIf="isMenuOpened">
 
-                <div class="note-icons">
-                    <div>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                            <img *ngIf="isMenuOpened" src="assets/images/icons/remaind.png" alt="pin" width="17px">
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                            <img *ngIf="isMenuOpened" src="assets/images/icons/collab.png" alt="pin" width="17px">
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                            <img *ngIf="isMenuOpened" src="assets/images/icons/color.png" alt="pin" width="17px">
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                            <img *ngIf="isMenuOpened" src="assets/images/icons/archive.png" alt="pin" width="17px">
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                            <img *ngIf="isMenuOpened" src="assets/images/icons/more.png" alt="pin" width="17px">
-                        </button>
-                    </div>
-                </div>
+              <div class="note-icons" *ngIf="isMenuOpened">
+                <app-icons></app-icons>
+              </div>
 
                 <div>
                     <span class="product">
@@ -52,7 +28,8 @@
                         <button mat-button (click)="closeMenu()" (click)="onSubmit()" class="example-icon close-bttn"
                             style="margin-right: 10px;" aria-label="Example icon-button with menu icon">
                             Close
-                        </button></span>
+                        </button>
+                    </span>
                 </div>
             </div>
         </div>

@@ -33,4 +33,17 @@ export class NoteService {
     }
     return this.httpService.getService('/Note/GetAllNotes', true, headers);
   }
+
+  editnoteservice(noteId:number,reqdata:any){
+    console.log("note servie",reqdata)
+    console.log("note id",noteId)
+
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer "+this.token
+      })
+    }
+    return this.httpService.putService(`/Note/UpdateNote${noteId}`, reqdata, true, headers);
+  }
 }

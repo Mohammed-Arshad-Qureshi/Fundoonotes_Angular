@@ -1,10 +1,28 @@
 .container {
-    width: 80%;
+    width: 90%;
     display:flex;
-    margin-left: 12%;
+    margin-left: 5%;
     flex-flow: wrap;
+    justify-content: center;
 }
 
 .note{
-    margin:5px;
+    margin:10px;
+
+}
+.card{
+    text-align: left;
+    justify-content: start;
+    padding-left: 3px;
+    margin-bottom: 0;
+}
+
+.card-title{
+    font-size: 15px; 
+    padding:10px;
+}
+
+.card-describe{
+    font-size: 14px;
+    padding:10px;
 }

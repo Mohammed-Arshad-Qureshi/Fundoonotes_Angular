@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/userService/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +13,7 @@ export class RegistrationComponent implements OnInit {
   registerForm! : FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,private user:UserService ) { }
+  constructor(private formBuilder: FormBuilder,private user:UserService,private snackbar:MatSnackBar,private router:Router ) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -43,6 +45,8 @@ export class RegistrationComponent implements OnInit {
     console.log(reqData);
     this.user.registration(reqData).subscribe((response : any) => {
       console.log(response);
+      this.snackbar.open("Registration Successfull");
+      this.router.navigate(['/login']);
       
     }
   )    // display form values on success

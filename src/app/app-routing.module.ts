@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authguard/authentication.guard';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"forgotpassword",component:ForgetPasswordComponent},
   {path:"email",component:EmailComponent},
-  {path:"home",component:DashboardComponent,
+  {path:"",redirectTo:"/login",pathMatch:"full"},
+  {path:"home",component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:"",redirectTo:"/home/notes",pathMatch:'full'},
     {path:"notes", component:GetAllnotesComponent}

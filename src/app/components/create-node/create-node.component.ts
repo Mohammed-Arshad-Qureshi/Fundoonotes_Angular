@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from 'src/app/services/noteService/note.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-node',
@@ -12,7 +14,8 @@ export class CreateNodeComponent implements OnInit {
   submitted = false;
   isMenuOpened: boolean = false;
   ispined: boolean = false;
-  constructor(private formBuilder: FormBuilder, private note: NoteService) { }
+  valdata:any;
+  constructor(private formBuilder: FormBuilder, private note: NoteService,private snackbar:MatSnackBar,private router:Router) { }
 
   ngOnInit(): void {
     this.createnoteForm = this.formBuilder.group({
@@ -31,7 +34,7 @@ export class CreateNodeComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.createnoteForm.value)
+    console.log("create note",this.createnoteForm.value)
 
     let reqData = {
       title: this.createnoteForm.value.title,
@@ -40,8 +43,11 @@ export class CreateNodeComponent implements OnInit {
     }
 
     this.note.createnoteservice(reqData).subscribe((response:any)=>{
-      console.log(response);
+      console.log("dsfdsf",response);
+      this.valdata = response;
+      console.log(this.valdata);
     })
+    
   }
 
 }

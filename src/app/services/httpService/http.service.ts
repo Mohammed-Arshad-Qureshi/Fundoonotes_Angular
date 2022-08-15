@@ -13,10 +13,14 @@ export class HttpService {
   constructor(private httpClient : HttpClient) { }
 
   postService(url:string, reqdata: any, token:boolean=false, httpOptions: any = {} ){
-    return this.httpClient.post(this.baseUrl+url,reqdata,token && httpOptions)
+    return this.httpClient.post(this.baseUrl+url, reqdata, token && httpOptions)
   }
 
   getService(url:string, token:boolean=false, httpOptions: any = {} ){
-    return this.httpClient.get(this.baseUrl+url,token && httpOptions)
+    return this.httpClient.get(this.baseUrl+url, token && httpOptions)
+  }
+
+  putService(url:string, reqdata:any, token:boolean=false, httpOptions: any = {} ){
+    return this.httpClient.put(this.baseUrl+url, reqdata, token && httpOptions)
   }
 }

@@ -1,1 +1,50 @@
-<p>icons works!</p>
+<div class="container">
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/images/icons/remaind.png" alt="pin" width="17px">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/images/icons/collab.png" alt="pin" width="17px">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/images/icons/color.png" alt="pin" width="17px">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/images/icons/archive.png" alt="pin" width="17px">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="assets/images/icons/more.png" [matMenuTriggerFor]="menu2" width="17px"/>
+            <mat-menu #menu2="matMenu">
+                <button mat-menu-item>Delete Note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show check
+                </button>
+                <button mat-menu-item>Copy to Google Docs</button>
+            </mat-menu>
+        </button>
+        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <img src="assets/images/icons/more.png" />
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu> -->
+    </div>
+</div>

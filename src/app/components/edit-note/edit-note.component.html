@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card class="card" style="width: 400px; text-align: left;" class="example-card">
+        <mat-card-title style="font-size: 15px;">
+            <div class="title-filed" style="width: 100%">
+                <input class="inputtxt product" id="title" #title autocomplete="off" value="{{notedata.title}}"
+                    placeholder="Title" type="text" style="font-size: 15px;">
+            </div>
+        </mat-card-title>
+        <mat-card-content>
+            <div class="title-filed">
+                <input class="inputtxt product" id="description" #description autocomplete="off"
+                    value="{{notedata.description}}" placeholder="Description" type="text" style="font-size: 15px;">
+            </div>
+        </mat-card-content>
+        <div class="note-items title-data">
+
+            <div class="note-icons">
+                <app-icons></app-icons>
+            </div>
+
+            <div>
+                <span class="product">
+                    <button mat-button class="example-icon close-bttn"
+                        style="margin-right: 10px;" (click)="closenote(title.value,description.value)" aria-label="Example icon-button with menu icon">
+                        Close
+                    </button>
+                </span>
+            </div>
+        </div>
+    </mat-card>
+</div>
