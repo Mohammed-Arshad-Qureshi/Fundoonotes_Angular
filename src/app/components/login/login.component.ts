@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     this.user.login(reqData).subscribe((response: any) => {
       console.log(response);
       localStorage.setItem("token",response.data);
-      if(localStorage.getItem('token') != null)
+      if(localStorage.getItem('token') != null || response != null)
       {
         this.snackbar.open("Login Successfully","",{
           duration:2000,

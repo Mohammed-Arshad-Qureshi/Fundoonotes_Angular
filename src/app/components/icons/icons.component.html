@@ -15,7 +15,7 @@
         </button>
     </div>
     <div>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" (click)="archivenote()" aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/archive.png" alt="pin" width="17px">
         </button>
     </div>
@@ -23,7 +23,7 @@
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/more.png" [matMenuTriggerFor]="menu2" width="17px"/>
             <mat-menu #menu2="matMenu">
-                <button mat-menu-item>Delete Note</button>
+                <button mat-menu-item (click)="trashnote()">Delete Note</button>
                 <button mat-menu-item>Add label</button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>Make a copy</button>

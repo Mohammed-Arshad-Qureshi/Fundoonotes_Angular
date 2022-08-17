@@ -1,14 +1,14 @@
 <div class="container">
   <div class="note" *ngFor="let note of NotesList">
-    <div (click)="openDialog(note)">
-        <mat-card class="card" style="width: 220px; text-align: left; padding: 0px;" class="example-card">
-          <mat-card-title class="card-title product">{{note.title}}</mat-card-title>
+    <div>
+        <mat-card class="card" style="width: 250px; text-align: left; padding: 0px;" class="example-card">
+          <mat-card-title (click)="openDialog(note)" class="card-title product">{{note.title}}</mat-card-title>
           <mat-card-content>
-            <span  class="card-describe product">{{note.description}}</span>
+            <span (click)="openDialog(note)" class="card-describe product">{{note.description}}</span>
           </mat-card-content>
           <div class="note-items title-data">
             <div class="note-icons">
-              <app-icons></app-icons>
+              <app-icons [notecard]="note"></app-icons>
             </div>
           </div>
         </mat-card>

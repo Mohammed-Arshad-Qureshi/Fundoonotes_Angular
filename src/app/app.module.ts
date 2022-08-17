@@ -34,6 +34,8 @@ import { IconsComponent } from './components/icons/icons.component';
 import { EditNoteComponent } from './components/edit-note/edit-note.component';
 
 import { AuthguardService } from './services/authguard/authguard.service';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 
 
@@ -49,7 +51,9 @@ import { AuthguardService } from './services/authguard/authguard.service';
     DisplayNoteComponent,
     GetAllnotesComponent,
     IconsComponent,
-    EditNoteComponent
+    EditNoteComponent,
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,

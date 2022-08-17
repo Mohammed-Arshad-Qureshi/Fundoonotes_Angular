@@ -7,6 +7,8 @@ import { RegistrationComponent } from './components/registration/registration.co
 import{ EmailComponent } from './components/email/email.component'
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path:"home",component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:"",redirectTo:"/home/notes",pathMatch:'full'},
-    {path:"notes", component:GetAllnotesComponent}
+    {path:"notes", component:GetAllnotesComponent},
+    {path:"archive",component:ArchiveComponent},
+    {path:"trash",component:TrashComponent}
   ]},
 
 ];

@@ -1,9 +1,9 @@
 .container {
-    width: 90%;
+    width: 94%;
     display:flex;
-    margin-left: 5%;
+    margin-left: 3%;
     flex-flow: wrap;
-    justify-content: center;
+    justify-content: start;
 }
 
 .note{
@@ -15,6 +15,7 @@
     justify-content: start;
     padding-left: 3px;
     margin-bottom: 0;
+    margin-left: 20px;
 }
 
 .card-title{

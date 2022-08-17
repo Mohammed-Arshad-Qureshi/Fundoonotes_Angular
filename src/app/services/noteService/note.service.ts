@@ -12,38 +12,71 @@ export class NoteService {
     this.token = localStorage.getItem('token');
   }
 
+  // create note
   createnoteservice(reqdata: any) {
     console.log(this.token);
     console.log(reqdata);
     let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        'Authorization': "Bearer "+this.token
+        'Authorization': "Bearer " + this.token
       })
     }
     return this.httpService.postService('/Note/AddNote', reqdata, true, headers);
   }
 
-  getAllNotesService(){
+  // get all notes
+  getAllNotesService() {
     let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        'Authorization': "Bearer "+this.token
+        'Authorization': "Bearer " + this.token
       })
     }
     return this.httpService.getService('/Note/GetAllNotes', true, headers);
   }
 
-  editnoteservice(noteId:number,reqdata:any){
-    console.log("note servie",reqdata)
-    console.log("note id",noteId)
+
+  // update note
+  editnoteservice(noteId: number, reqdata: any) {
+    console.log("note servie", reqdata)
+    console.log("note id", noteId)
 
     let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        'Authorization': "Bearer "+this.token
+        'Authorization': "Bearer " + this.token
       })
     }
-    return this.httpService.putService(`/Note/UpdateNote${noteId}`, reqdata, true, headers);
+    return this.httpService.putService(`/Note/UpdateNote/${noteId}`, reqdata, true, headers);
+  }
+
+
+  // Delete or trash note
+  deletenote(noteId: number) {
+    console.log("note id", noteId)
+
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+
+    return this.httpService.deleteService(`/Note/TrashNote/${noteId}`,true,headers);
+  }
+
+  //Archive note
+  archivenote(noteId: number) {
+    console.log("note id", noteId)
+
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+
+    return this.httpService.deleteService(`/Note/ArchiveNote/${noteId}`,true,headers);
   }
 }
