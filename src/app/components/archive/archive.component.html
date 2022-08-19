@@ -1,1 +1,3 @@
-<app-display-note [NotesList]="notesArray"></app-display-note>
+<div>
+    <app-display-note [NotesList]="notesArray" (messagetoDisplay)="receivedmessagetoDisplay($event)"></app-display-note>
+</div>

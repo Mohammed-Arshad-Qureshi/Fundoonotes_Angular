@@ -56,9 +56,31 @@
                 </button>
             </div>
             <div>
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu"
+                    aria-label="Example icon-button with menu icon">
                     <img src="assets/images/icons/account.png" alt="menu icon" width="25px">
                 </button>
+                <mat-menu #menu="matMenu">
+
+                    <div class="account-bttn" mat-card-lg-image>
+
+                        <div class="close-bttn bttn">
+                            <button mat-menu-item>
+                                <span>close</span>
+                            </button>
+                        </div>
+                        <div>
+                            <img class="account-logo-img" src="assets/images/icons/account.png" alt="menu icon"
+                                width="25px">
+                        </div>
+
+                        <div class="logout-bttn bttn">
+                            <button mat-menu-item (click)="logout()">
+                                <span>logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </mat-menu>
             </div>
 
         </div>
@@ -87,7 +109,7 @@
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            <div style="height: 88vh;">
+            <div style="height: 89vh;">
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>

@@ -8,8 +8,9 @@ import { EditNoteComponent } from '../edit-note/edit-note.component';
   styleUrls: ['./display-note.component.scss']
 })
 export class DisplayNoteComponent implements OnInit {
-
+  msg:any;
   @Input() NotesList:any;
+  @Output() messagetoDisplay = new EventEmitter<string>();
   // @Output() messageDisplaytoGetAllnotes = new EventEmitter<string>();
 post:any;
   constructor(public dialog: MatDialog) { }
@@ -23,7 +24,15 @@ post:any;
     data:{
       selectednote:note
     }
+    
    });
+  }
+
+  receivedmessagetoDisplay($event:any){
+    this.msg=$event;
+    console.log("display component:  ",this.msg);
+    this.messagetoDisplay.emit(this.msg);
+
   }
 
 }

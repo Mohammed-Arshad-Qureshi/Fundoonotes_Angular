@@ -29,4 +29,9 @@ export class ArchiveComponent implements OnInit {
     })
   }
 
+  receivedmessagetoDisplay($event:any){
+    console.log("archive component",$event);
+    this.getAllNotes();
+  }
+
 }

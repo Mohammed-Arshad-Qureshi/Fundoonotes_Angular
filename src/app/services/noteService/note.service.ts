@@ -79,4 +79,19 @@ export class NoteService {
 
     return this.httpService.deleteService(`/Note/ArchiveNote/${noteId}`,true,headers);
   }
+
+
+  deleteforever(noteId: number) {
+    console.log("note id", noteId)
+
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+
+    return this.httpService.deleteService(`/Note/DeleteNote/${noteId}`,true,headers);
+  }
+
 }

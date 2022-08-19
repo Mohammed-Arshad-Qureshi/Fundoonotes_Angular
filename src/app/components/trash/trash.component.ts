@@ -30,5 +30,10 @@ export class TrashComponent implements OnInit {
     })
   }
 
+  receivedmessagetoDisplay($event:any){
+    console.log("trash component",$event);
+    this.getAllNotes();
+  }
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from 'src/app/services/noteService/note.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-allnotes',
@@ -10,7 +11,7 @@ export class GetAllnotesComponent implements OnInit {
   notesArray: any;
   message: any;
   public subscription: any;
-  constructor(private note:NoteService) { }
+  constructor(private note:NoteService,private router:Router) { }
 
   ngOnInit(): void {
     console.log("hello world");
@@ -28,6 +29,17 @@ export class GetAllnotesComponent implements OnInit {
       return this.notesArray;
       
     })
+  }
+
+  receivemessageTrashtoDisplay($event:any){
+    this.message = $event;
+    console.log("get all notes component",this.message);
+    this.getAllNotes();
+
+  }
+
+  messageupdate($event:any){
+    this.getAllNotes();
   }
 
 }
