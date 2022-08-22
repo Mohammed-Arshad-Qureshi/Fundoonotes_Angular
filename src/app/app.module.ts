@@ -36,6 +36,8 @@ import { EditNoteComponent } from './components/edit-note/edit-note.component';
 import { AuthguardService } from './services/authguard/authguard.service';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { AddlabelComponent } from './components/addlabel/addlabel.component';
+import { GetAllLabelsComponent } from './components/get-all-labels/get-all-labels.component';
 
 
 
@@ -53,7 +55,9 @@ import { TrashComponent } from './components/trash/trash.component';
     IconsComponent,
     EditNoteComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    AddlabelComponent,
+    GetAllLabelsComponent
   ],
   imports: [
     BrowserModule,

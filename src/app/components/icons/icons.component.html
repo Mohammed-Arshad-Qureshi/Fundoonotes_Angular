@@ -15,26 +15,24 @@
         </button>
     </div>
     <div *ngIf="!isArchivecomponent">
-        <button mat-icon-button class="example-icon" (click)="archivenote()" matTooltip="archive" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" (click)="archivenote()" matTooltip="archive"
+            aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/archive.png" alt="pin" width="17px">
         </button>
     </div>
     <div *ngIf="isArchivecomponent">
-        <button mat-icon-button class="example-icon" (click)="archivenote()" matTooltip="unarchive" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" (click)="archivenote()" matTooltip="unarchive"
+            aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/unarchive.png" alt="pin" width="17px">
         </button>
     </div>
     <div>
         <button mat-icon-button class="example-icon" matTooltip="more" aria-label="Example icon-button with menu icon">
-            <img src="assets/images/icons/more.png" [matMenuTriggerFor]="menu2" width="17px"/>
+            <img src="assets/images/icons/more.png" [matMenuTriggerFor]="menu2" width="17px" />
             <mat-menu #menu2="matMenu">
                 <button mat-menu-item (click)="trashnote()">Delete Note</button>
-                <button mat-menu-item>
+                <button mat-menu-item (click)="addlabel()">
                     Add label
-                    <mat-menu #menu3="matMenu">
-                        <input type="text">
-                        <button mat-menu-item>Make a copy</button>
-                    </mat-menu>
                 </button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>Make a copy</button>
@@ -46,15 +44,27 @@
     </div>
 </div>
 
+
 <div class="container" *ngIf="isTrashcomponenet">
     <div>
-        <button mat-icon-button class="example-icon" matTooltip="delete forever" (click)="deletenote()"  aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" matTooltip="delete forever" (click)="deletenote()"
+            aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/deleted.png" alt="deleted" width="17px">
         </button>
     </div>
     <div>
-        <button mat-icon-button class="example-icon" (click)="trashnote()"  matTooltip="restore" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" (click)="trashnote()" matTooltip="restore"
+            aria-label="Example icon-button with menu icon">
             <img src="assets/images/icons/restore.png" alt="restore" width="17px">
         </button>
+    </div>
+</div>
+
+
+<div class="laabel" *ngIf="openLabel">
+    <app-addlabel (messagetoDisplay)="closelable($event)"></app-addlabel>
+    <div *ngFor="let item of this.labelArray">
+        <div></div>
+
     </div>
 </div>
