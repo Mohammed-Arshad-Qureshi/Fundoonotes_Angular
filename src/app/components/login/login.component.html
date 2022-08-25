@@ -24,7 +24,10 @@
     <div class="email">
         <mat-form-field appearance="outline" class="em">
             <mat-label>Password</mat-label>
-            <input matInput formControlName="password" type="password" placeholder="password"> 
+            <input matInput formControlName="password" matInput [type]="hide ? 'password' : 'text'"> 
+            <button  class="bttn-hide" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
             <mat-error class="err">Enter Password</mat-error>
             <mat-hint class="hint"><a routerLink="/forgotpassword"  class="anchor" >Forgot Password</a></mat-hint>
         </mat-form-field>

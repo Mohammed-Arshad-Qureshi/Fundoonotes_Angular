@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="note" *ngFor="let note of NotesList">
+  <div class="note" *ngFor="let note of NotesList | filter : searchWord ">
     <div>
-        <mat-card class="card" style="width: 250px; text-align: left; padding: 0px;" class="example-card">
+        <mat-card class="card" [style.background]="note.bgcolor" style="width: 280px; text-align: left; padding: 0px;" class="example-card">
           <mat-card-title (click)="openDialog(note)" class="card-title product">{{note.title}}</mat-card-title>
           <mat-card-content>
             <span (click)="openDialog(note)" class="card-describe product">{{note.description}}</span>

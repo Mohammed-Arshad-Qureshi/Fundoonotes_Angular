@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from 'src/app/services/noteService/note.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -15,13 +15,14 @@ export class CreateNodeComponent implements OnInit {
   isMenuOpened: boolean = false;
   ispined: boolean = false;
   valdata:any;
+  @Output() messagetoDisplay = new EventEmitter<string>();
   constructor(private formBuilder: FormBuilder, private note: NoteService,private snackbar:MatSnackBar,private router:Router) { }
 
   ngOnInit(): void {
     this.createnoteForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
-      bgcolor: 'green'
+      bgcolor: '#ffffff'
 
     })
   }
@@ -44,8 +45,8 @@ export class CreateNodeComponent implements OnInit {
 
     this.note.createnoteservice(reqData).subscribe((response:any)=>{
       console.log("dsfdsf",response);
-      this.valdata = response;
-      console.log(this.valdata);
+      this.messagetoDisplay.emit(response);
+      
     })
     
   }

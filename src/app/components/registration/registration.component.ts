@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
   registerForm! : FormGroup;
   submitted = false;
+  hide = true;
 
   constructor(private formBuilder: FormBuilder,private user:UserService,private snackbar:MatSnackBar,private router:Router ) { }
 

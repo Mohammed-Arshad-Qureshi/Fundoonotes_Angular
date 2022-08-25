@@ -12,16 +12,19 @@ import { outputAst } from '@angular/compiler';
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss']
 })
+
 export class IconsComponent implements OnInit {
-  labelArray:any;
+  labelArray: any;
   @Input() notecard: any;
   @Output() messagetoDisplay = new EventEmitter<string>();
 
-  constructor(private note: NoteService, private snackbar: MatSnackBar, private route: ActivatedRoute,private label:LabelService) { }
+  constructor(private note: NoteService, private snackbar: MatSnackBar, private route: ActivatedRoute, private label: LabelService) { }
   isTrashcomponenet: boolean = false;
   isArchivecomponent: boolean = false;
   openLabel: boolean = false;
-  reqData:any;
+  reqData: any;
+  color: boolean = false;
+  colors: any;
 
   ngOnInit(): void {
     let comp = this.route.snapshot.component;
@@ -32,6 +35,12 @@ export class IconsComponent implements OnInit {
     if (comp == ArchiveComponent) {
       this.isArchivecomponent = true;
     }
+
+    this.getallcolors();
+
+  }
+
+  getallcolors() {
 
   }
 
@@ -70,7 +79,6 @@ export class IconsComponent implements OnInit {
     })
   }
 
-
   deletenote() {
     this.note.deleteforever(this.notecard.noteId).subscribe((response: any) => {
       console.log("from icon component : ---", response);
@@ -83,26 +91,50 @@ export class IconsComponent implements OnInit {
     })
   }
 
-  addlabel(){
+  addlabel() {
     console.log("add label clicked");
     this.openLabel = true;
-  
-    }
+    this.label.getAllLabelbyidService(this.notecard.noteId).subscribe((request: any) => {
+      console.log("get all label by label id ", request.data);
+      this.labelArray = request.data;
+      console.log("get all constructor ", this.labelArray);
+      return this.labelArray;
+    })
 
-  closelable($event:any){
-    console.log("icon comp",$event);
+  }
+
+  closelable($event: any) {
+    console.log("icon comp", $event);
     console.log(this.notecard.noteId);
     this.openLabel = false;
     let reqData = {
-      labelname:$event
+      labelname: $event
     }
 
-    this.label.createlabelservice(this.notecard.noteId,reqData).subscribe((response:any)=>{
-      console.log("icon comp",response);
+    this.label.createlabelservice(this.notecard.noteId, reqData).subscribe((response: any) => {
+      console.log("icon comp", response);
     })
   }
 
+  colorpalet() {
+    this.color = true;
+    this.note.getAllnoteColorsService(this.notecard.noteId).subscribe((request: any) => {
+      console.log("all colors displayed", request.data);
+      this.colors = request.data;
+    })
 
- 
+  }
+  setColor(color: any) {
+    console.log("taken color", color);
+    console.log(this.notecard.noteId);
+    let reqData = {
+      bgcolor: color,
+    }
 
+    this.note.updateColorsService(this.notecard.noteId, reqData).subscribe((response: any) => {
+      console.log("all colors displayed", response);
+      this.messagetoDisplay.emit(response);
+
+    })
+  }
 }

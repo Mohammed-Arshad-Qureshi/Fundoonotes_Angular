@@ -28,7 +28,7 @@ export class EditNoteComponent implements OnInit {
     let reqData = {
       title: title,
       description: description,
-      bgcolor: "yellow"
+      bgcolor: "white"
     }
 
     this.note.editnoteservice(noteId,reqData).subscribe((response: any) => {

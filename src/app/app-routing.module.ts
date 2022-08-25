@@ -9,6 +9,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { GetNotebyidComponent } from './components/get-notebyid/get-notebyid.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
     {path:"",redirectTo:"/home/notes",pathMatch:'full'},
     {path:"notes", component:GetAllnotesComponent},
     {path:"archive",component:ArchiveComponent},
-    {path:"trash",component:TrashComponent}
+    {path:"trash",component:TrashComponent},
+    {path:"getlabelnote/:id",component:GetNotebyidComponent}
   ]},
 
 ];

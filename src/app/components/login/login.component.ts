@@ -12,6 +12,7 @@ import { ThisReceiver } from '@angular/compiler';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
+  hide = true;
   constructor(private formBuilder: FormBuilder, private user: UserService,private router:Router,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {

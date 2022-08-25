@@ -38,6 +38,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { AddlabelComponent } from './components/addlabel/addlabel.component';
 import { GetAllLabelsComponent } from './components/get-all-labels/get-all-labels.component';
+import { GetNotebyidComponent } from './components/get-notebyid/get-notebyid.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -57,7 +59,9 @@ import { GetAllLabelsComponent } from './components/get-all-labels/get-all-label
     ArchiveComponent,
     TrashComponent,
     AddlabelComponent,
-    GetAllLabelsComponent
+    GetAllLabelsComponent,
+    GetNotebyidComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

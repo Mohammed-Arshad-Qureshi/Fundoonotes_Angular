@@ -21,13 +21,13 @@ input{
 .searchbody{
     background-color:#f1ebeb;
     border-radius: 6px;
-    width:575px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:820px;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .inputtxt{
     background-color:#f1ebeb;
-    width:86%;
+    width:90%;
     height: 30px;
     font-size: medium;
     outline: none;
@@ -45,6 +45,7 @@ input{
     background-color: white;
     border-width: thin;
     border:1px solid #e3dede;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }
 .inputtxt:hover{
@@ -54,12 +55,12 @@ input{
 .lastitems{
     display: flex;
     flex-direction: row;
-    margin-left: 26%;
+    margin-left: 15%;
 }
 .account{
     display: flex;
     flex-direction: row;
-    margin-left: 3.5%;
+    margin-left: 5%;
 }
 // ====================================
 .menu-items{

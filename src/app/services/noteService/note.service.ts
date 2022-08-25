@@ -94,4 +94,26 @@ export class NoteService {
     return this.httpService.deleteService(`/Note/DeleteNote/${noteId}`,true,headers);
   }
 
+
+  getAllnoteColorsService(noteId:number){
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.getService(`/Note/GetALlColors/${noteId}`, true, headers);
+  }
+
+  updateColorsService(noteId:number,reqData:any){
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.putService(`/Note/UpdateColor/${noteId}`, reqData, true, headers);
+
+  }
+
 }

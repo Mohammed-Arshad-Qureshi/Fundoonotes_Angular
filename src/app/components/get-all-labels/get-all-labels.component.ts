@@ -10,14 +10,13 @@ export class GetAllLabelsComponent implements OnInit {
   labelArray:any;
   ngOnInit(): void {
     this.getalllabels();
-    console.log("get all constructor ",this.labelArray);
   }
 
   getalllabels() {
     this.label.getAllLabelService().subscribe((request: any) => {
-      console.log("get all label data ", request);
+      console.log("response ", request);
        this.labelArray = request.data;
-      console.log("get all constructor ",this.labelArray);
+      console.log("get all label data ",this.labelArray);
       return this.labelArray;
     })
 

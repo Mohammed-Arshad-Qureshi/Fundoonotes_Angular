@@ -52,8 +52,6 @@
                         <mat-label class="na">Password</mat-label>
                         <input matInput formControlName="password" type="password" placeholder="Placeholder">
                         <mat-error class="err">Enter Password</mat-error>
-                        <mat-hint class="err">Use 8 or more characters with a mix of letters, numbers & symbols
-                        </mat-hint>
                     </mat-form-field>
 
                 </div>
@@ -61,10 +59,13 @@
                 <div class="innersubdiv">
                     <mat-form-field appearance="outline" class="inputlabel">
                         <mat-label class="label">Confirm password</mat-label>
-                        <input matInput type="password" formControlName="confirmPassword" placeholder="Placeholder">
+                        <input matInput type="password" formControlName="confirmPassword" placeholder="Placeholder" matInput [type]="hide ? 'password' : 'text'">
                         <mat-error class="err">Enter Confirm Password</mat-error>
                     </mat-form-field>
                 </div>
+            </div>
+            <div class="pwd-data">
+                <span class="err">Use 8 or more characters with a mix of letters, numbers & symbols</span> 
             </div>
 
             <div class="showpass">
